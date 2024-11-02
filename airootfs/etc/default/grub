@@ -1,9 +1,9 @@
 # GRUB boot loader configuration
 
 GRUB_DEFAULT=0
-GRUB_TIMEOUT=5
+GRUB_TIMEOUT=4
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet audit=0"
+GRUB_CMDLINE_LINUX_DEFAULT='quiet splash mitigations=off loglevel=0 audit=0'
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
@@ -35,15 +35,15 @@ GRUB_GFXPAYLOAD_LINUX=keep
 #GRUB_DISABLE_LINUX_UUID=true
 
 # Uncomment to disable generation of recovery mode menu entries
-GRUB_DISABLE_RECOVERY=true
+#GRUB_DISABLE_RECOVERY=true
 
 # Uncomment and set to the desired menu colors.  Used by normal and wallpaper
 # modes only.  Entries specified as foreground/background.
-#GRUB_COLOR_NORMAL="white/black"
-#GRUB_COLOR_HIGHLIGHT="light-cyan/black"
+GRUB_COLOR_NORMAL="white/black"
+GRUB_COLOR_HIGHLIGHT="light-cyan/black"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-#GRUB_BACKGROUND=
+GRUB_BACKGROUND="/usr/share/wallpapers/real-wood/real-wood.jpg"
 #GRUB_THEME=
 
 # Uncomment to get a beep at GRUB start
@@ -55,7 +55,7 @@ GRUB_DISABLE_RECOVERY=true
 #GRUB_SAVEDEFAULT="true"
 
 # Uncomment to make grub stop using submenus
-#GRUB_DISABLE_SUBMENU=y
+GRUB_DISABLE_SUBMENU=y
 
 #New GRUB update disables OS prober by default. We don't want that.
 GRUB_DISABLE_OS_PROBER=false

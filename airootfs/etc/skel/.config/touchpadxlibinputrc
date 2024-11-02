@@ -1,0 +1,6 @@
+[FTCS1000:00 2808:0101 Touchpad]
+disableWhileTyping=false
+naturalScroll=false
+scrollEdge=true
+scrollTwoFinger=false
+tapToClick=false
